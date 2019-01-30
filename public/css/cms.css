@@ -1,0 +1,262 @@
+body{
+	font-family:'Raleway';
+	text-decoration-style:none;
+}
+
+input, select, textarea, button{
+  font-family:inherit;
+}
+
+textarea{
+  resize:vertical;
+}
+
+hr{
+  width:100%;
+  height:2px;
+}
+
+.wrapper{
+	margin:20px;
+}
+
+.content{
+  width:100%;
+  background-color:#f1f1f1;
+  float:left;
+}
+
+/* Login */
+.loginWrapper{
+  background-color:#f1f1f1;
+  border-radius:10px;
+  margin-top:100px;
+}
+
+.loginWrapper h1{
+  text-align:center;
+  color:#28454F;
+  font-size:36px;
+}
+
+.formField{
+  margin:10px 0;
+  padding:7px 5px;
+  width:100%;
+  display:block;
+  font-size:18px;
+  border:none;
+}
+
+.loginButton{
+  width:100%;
+  background:#28454F;
+  padding:10px;
+  font-size:20px;
+  display:block;
+  border:none;
+  color:#f1f1f1;
+  cursor:pointer;
+}
+
+.loginButton:hover{
+  background-color:#335966;
+}
+
+.loginFormFooter{
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  text-align:center;
+  background-color:#e6e6e6;
+  padding:10px 0;
+}
+
+.loginFormFooter a{
+  text-decoration:none !important;
+  color:#28454F;
+  font-size:14px;
+}
+
+/* Navigation */
+.navigation{
+  width:100%;
+  height:100%;
+  background-color:#28454f;   
+  color:#f1f1f1;
+}
+
+.columns.is-gapless:not(:last-child){
+  margin-bottom:0;
+}
+
+.profile{
+  background-color:#375f6d;
+  display:flex;
+}
+
+.profileImage{
+  position:relative;
+  width:100px;
+  height:100px;
+  margin:10px 0px 0px 10px;
+}
+
+.profileInfo{
+  width:100%;
+  height:100px;
+  margin:10px 10px 0px 10px;
+  font-size:24px;
+}
+
+.profileInfo h1{
+  font-size:20px;
+}
+
+.avatar{
+  border-radius:5px;
+  -webkit-filter:blur(0px);
+  transition:all 0.5s ease;
+}
+
+.avatar:hover{
+  -webkit-filter:blur(1px);
+  transition:all 0.5s ease;
+}
+
+.menuItem{
+  display:flex; 
+  font-size:18px;
+  padding:10px;
+  color:#f1f1f1;
+}
+
+.menuItem h2{
+  flex:0.6;
+  margin:5px 0px 0px 10px;
+  justify-content:center;
+}
+
+.menuItem div{
+  flex:0.4;
+  background-color:#28454f; 
+}
+
+.menuItem {
+  border-left:1px solid #2b4a55;
+}
+
+.menuItem:hover{
+  color:#f1f1f1;
+  transition:all 0.3s ease;
+}
+
+/*.onPage {
+  color:#f1f1f1;
+}*/
+
+/* Edit page */
+.editWrapper{
+  margin:20px;
+}
+
+.titleBlock{
+  width:100%;
+  float:left;
+}
+
+.titleBlock h2{
+  display:inline-block;
+  margin:0px;
+  font-size:24px;
+}
+
+.titleBlock input[type=text]{
+  display:block;
+  width:50%;
+  border:0;
+  border-radius:2px;
+  padding:2px;
+  font-size:16px;
+}
+
+.stringBlock{
+  width:50%;
+  float:left;
+  padding:0px 15px 15px 0;  
+}
+
+.stringBlock label, .textareaBlock label{
+  font-size:12px;
+}
+
+.stringBlock input[type=text], .textareaBlock textarea{
+  display:block;
+  width:100%;
+  border:0;
+  border-radius:2px;
+  padding:2px;
+  font-size:16px;
+}
+
+.textareaBlock{
+  width:100%;
+  float:left;
+  padding:0px 15px 15px 0;  
+}
+
+.fileBlock{
+  width:33%;
+  float:left;
+}
+
+.fileBlock input[type=file]{
+  display:block;
+  width:150px;
+}
+
+.uploadedFile{
+  position:relative;
+  width:150px;
+  max-height:100px;
+  overflow-y: hidden;
+}
+
+.submitBlock{
+  width:100%;
+  float:left;
+  margin:10px 0 10px 0;
+}
+
+.updatesIndex{
+  margin-top:70px;
+}
+
+.uploadButton{
+  margin:10px 0 10px 0;
+}
+
+#successMessage{
+  margin:20px;
+  position:fixed;
+  bottom:0px;
+  right:0px;
+  z-index:5;
+}
+
+/* footer */
+.footer{
+  border-top:1px solid #28454f; 
+  background-color:#E0E0E0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

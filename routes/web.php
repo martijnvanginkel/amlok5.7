@@ -11,6 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::resource('pages', 'PageController', ['except' => ['index']]);
+    Route::resource('posts', 'PostController', ['except' => ['index']]);
+
 });
+
+Route::group(['middleware' => ['guest']], function () {
+
+	// Root
+	Route::get('/', 'DataController@getIndex')->name('index');
+	Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
+
+});
+
+Route::post('emails', 'EmailController@sendEmail')->name('email.store');
+
+
+// Auto
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
