@@ -1,6 +1,6 @@
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 
-@section('content') --}}
+@section('content')
 
 <div class="editWrapper">
 
@@ -12,4 +12,4 @@
 
 </div>
 
-{{-- @endsection --}}
+@endsection
