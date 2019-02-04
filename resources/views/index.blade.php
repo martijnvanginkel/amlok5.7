@@ -4,7 +4,7 @@
 
 @include('partials._messages')
 
-<!-- Banner -->
+{{--
 <div class="banner">
 	<img src="{{asset('img/nik-macmillan-280300.jpg')}}">
 	<div class="bannerText">
@@ -13,13 +13,13 @@
 	</div>
 </div>
 
-<!-- About us -->
+
 <div class="columns is-gapless">
 	<div class="column">
 		<div class="aboutUs" id="aboutUsScroll">
 			<div class="aboutUsText">
-				{{-- <h1 class="title">{{ $words[0]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[0]->textarea)) !!}</p> --}}
+				<h1 class="title">{{ $words[0]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[0]->textarea)) !!}</p>
 			</div>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 	</div>
 </div>
 
-<!-- Items -->
+
 <div class="blockWrapper">
 	<div class="columns is-gapless">
 		<div class="column">
@@ -39,8 +39,8 @@
 				<div class="blockIcon">
 					@include('icons._talking')
 				</div>
-				{{-- <h1 class="title">{{ $words[1]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[1]->textarea)) !!}</p> --}}
+				<h1 class="title">{{ $words[1]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[1]->textarea)) !!}</p>
 
 			</div>
 		</div>
@@ -49,8 +49,8 @@
 				<div class="blockIcon">
 					@include('icons._service')
 				</div>
-				{{-- <h1 class="title">{{ $words[2]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[2]->textarea)) !!}</p> --}}
+				<h1 class="title">{{ $words[2]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[2]->textarea)) !!}</p>
 
 			</div>
 		</div>
@@ -59,8 +59,8 @@
 				<div class="blockIcon">
 					@include('icons._creditcard')
 				</div>
-				{{-- <h1 class="title">{{ $words[3]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[3]->textarea)) !!}</p> --}}
+				<h1 class="title">{{ $words[3]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[3]->textarea)) !!}</p>
 
 			</div>
 
@@ -68,7 +68,7 @@
 	</div>
 </div>
 
-<!-- Updates -->
+
 
 <h1 class="updatesTitle" id="updateScroll">Updates</h1>
 
@@ -84,7 +84,7 @@
 	<div class="column is-5">
 		<div class="updates">
 			<ul>
-			{{-- @if(count($posts) > 0)
+			@if(count($posts) > 0)
 			@foreach($posts as $post)
 
 				<li class="updateItem">
@@ -106,7 +106,7 @@
 					<a href="{{ route('posts.show', $latestPost->id) }}" class="underline">Bekijk alle</a>
 				</li>
 			</ul>
-			@endif --}}
+			@endif
 		</div>
 	</div>
 </div>
@@ -146,7 +146,7 @@
 
 		</div>
 	</div>
-</div>
+</div> --}}
 
 
 @endsection
