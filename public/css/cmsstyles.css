@@ -1,0 +1,26 @@
+/* Login screen */
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.cms-nav{
+  display:flex;
+  flex-direction:row;
+  padding:5px 0;
+}
+
+.cms-nav h1{
+  flex-grow:1;
+  vertical-align:middle;
+  display:flex;
+  padding:5px 0 0 20px;
+}
+
+.cms-nav a{
+  margin-right:10px;
+}

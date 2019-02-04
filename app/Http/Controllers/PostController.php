@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Post;
-use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -25,9 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $posts = Post::all();
-
-        return view('posts.create')->with('posts', $posts);
+        //
     }
 
     /**
@@ -38,89 +35,65 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,
-        [
-            'title' => 'required',
-            'body' => 'required',
-        ]);
-
-        $post = new Post;
-
-        //ingevulde data door de gebruiker wordt gevalideert door bovenstaande
-        $post->title = $request->title;
-        $post->body = $request->body;
-
-        $post->save();
-
-        session()->flash('success', 'Your changes have been saved!');
-
-        return redirect()->route('posts.create');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        $posts = Post::all();
-        $post = Post::find($id);
-
-        return view('posts.show', compact('posts', 'post'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        $post = Post::find($id);
-
-        return view('posts.edit')->with('post', $post);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        $this->validate($request, array(
-                'title' => 'required',
-                'body' => 'required'
-            ));
 
-        $post = Post::find($id);
+      $post->aboutustitle = $request->aboutustitle;
+      $post->aboutustext = $request->aboutustext;
 
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
+      $post->icontext1 = $request->icontext1;
+      $post->icontext2 = $request->icontext2;
+      $post->icontext3 = $request->icontext3;
 
-        $post->save();
+      $post->icon1title = $request->icon1title;
+      $post->icon2title = $request->icon2title;
+      $post->icon3title = $request->icon3title;
 
-        session()->flash('success', 'Your changes have been saved!');
+      $post->update();
 
-        return redirect()->route('posts.edit', $post->id);
+      return view('home', compact('post'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        $post = Post::find($id);
-        $post->delete();
-
-        return redirect()->route('posts.create');
+        //
     }
 }

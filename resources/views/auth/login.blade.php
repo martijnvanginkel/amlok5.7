@@ -1,50 +1,42 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('content')
 
-<div class="columns">
-    <div class="column is-one-third is-offset-one-third">
-        <div class="loginWrapper">
-            <h1>Login</h1>
+<div class="center-screen">
+  <form method="POST" action="{{ route('login') }}">
+    @csrf
 
-            <form method="POST" action="{{ route('login') }}">
-                {{ csrf_field() }}
-
-                    <div class="wrapper">
-
-                    <!-- Email -->
-                        <label for="email" ></label>
-                        <input class="formField" placeholder="E-Mail Address" type="email"  name="email" value="{{ old('email') }}" required autofocus>
-                        @if ($errors->has('email'))
-                          <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                          </span>
-                        @endif
-
-                    <!-- Password -->
-                        <label for="password"></label>
-                        <input class="formField" placeholder="Password" type="password" name="password" required>
-                        @if ($errors->has('password'))
-                          <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
-                          </span>
-                        @endif
-            
-                        <label>
-                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                        </label>
-
-                    </div>
-            
-                    <button class="loginButton" type="submit">Login</button>
-
-                <div class="loginFormFooter">
-                    <a href="{{ route('password.request') }}">Forgot Your Password?</a>
-                </div>
-                
-            </form>
-        </div>
+    <div class="field">
+      <div class="control">
+        <label for="email">{{ __('E-Mail Address') }}</label>
+        <input class="input" id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+      </div>
     </div>
+
+    <div class="field">
+      <div class="control">
+        <label for="password">{{ __('Password') }}</label>
+        <input class="input" id="password" type="password" name="password" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+
+        <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+        <label for="remember"> {{ __('Remember Me') }} </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <button type="submit" class="button is-primary">
+          {{ __('Login') }}
+        </button>
+      </div>
+    </div>
+
+  </form>
 </div>
 
 @endsection

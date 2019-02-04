@@ -17,8 +17,8 @@
 	<div class="column">
 		<div class="aboutUs" id="aboutUsScroll">
 			<div class="aboutUsText">
-				{{-- <h1 class="title">{{ $words[0]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[0]->textarea)) !!}</p> --}}
+				<h1 class="title">{{ $post->aboutustitle }}</h1>
+				<p>{!! nl2br(e($post->aboutustext)) !!}</p>
 			</div>
 		</div>
 	</div>
@@ -38,8 +38,8 @@
 				<div class="blockIcon">
 					@include('icons._talking')
 				</div>
-				{{-- <h1 class="title">{{ $words[1]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[1]->textarea)) !!}</p> --}}
+				<h1 class="title">{{ $post->icon1title }}</h1>
+				<p>{!! nl2br(e($post->icontext1)) !!}</p>
 
 			</div>
 		</div>
@@ -48,8 +48,8 @@
 				<div class="blockIcon">
 					@include('icons._service')
 				</div>
-				{{-- <h1 class="title">{{ $words[2]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[2]->textarea)) !!}</p> --}}
+			<h1 class="title">{{ $post->icon1title }}</h1>
+				<p>{!! nl2br(e($post->icontext2)) !!}</p>
 
 			</div>
 		</div>
@@ -58,8 +58,8 @@
 				<div class="blockIcon">
 					@include('icons._creditcard')
 				</div>
-				{{-- <h1 class="title">{{ $words[3]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[3]->textarea)) !!}</p> --}}
+			<h1 class="title">{{ $post->icon1title }}</h1>
+				<p>{!! nl2br(e($post->icontext3)) !!}</p>
 
 			</div>
 
@@ -68,7 +68,7 @@
 </div>
 
 
-
+{{--
 <h1 class="updatesTitle" id="updateScroll">Updates</h1>
 
 <div class="columns is-gapless">
@@ -108,7 +108,7 @@
 			@endif
 		</div>
 	</div>
-</div>
+</div> --}}
 
 <div class="contactWrapper">
 	<div class="columns">
@@ -117,7 +117,7 @@
 
 				<h1>Contact /tijdelijk offline/</h1>
 
-			    <form method="POST" action="{{ route('email.store') }}">
+			    <form method="POST" action="">
 
 			    <label name="name">Naam:</label>
 			    <input id="name" name="name" type="text" required>

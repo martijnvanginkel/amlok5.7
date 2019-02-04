@@ -13,24 +13,15 @@
 
 
 
-Route::group(['middleware' => ['auth']], function () {
 
-    Route::resource('pages', 'PageController', ['except' => ['index']]);
-    Route::resource('posts', 'PostController', ['except' => ['index']]);
+Route::get('/', 'PageController@getIndex')->name('index');
 
-});
+Route::get('/home', 'PageController@getHome')->name('home');
+Route::resource('posts', 'PostController');
+// Route::group(['middleware' => ['auth']], function () {
+//
+//   Route::get('/home', 'PostController@index')->name('home');
+//
+// });
 
-Route::group(['middleware' => ['guest']], function () {
-
-	// Root
-	Route::get('/', 'DataController@getIndex')->name('index');
-	Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
-
-});
-
-Route::post('emails', 'EmailController@sendEmail')->name('email.store');
-
-
-// Auto
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
