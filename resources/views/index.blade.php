@@ -4,7 +4,6 @@
 
 @include('partials._messages')
 
-{{--
 <div class="banner">
 	<img src="{{asset('img/nik-macmillan-280300.jpg')}}">
 	<div class="bannerText">
@@ -146,7 +145,7 @@
 
 		</div>
 	</div>
-</div> --}}
+</div>
 
 
 @endsection
