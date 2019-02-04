@@ -17,8 +17,8 @@
 	<div class="column">
 		<div class="aboutUs" id="aboutUsScroll">
 			<div class="aboutUsText">
-				<h1 class="title">{{ $words[0]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[0]->textarea)) !!}</p>
+				{{-- <h1 class="title">{{ $words[0]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[0]->textarea)) !!}</p> --}}
 			</div>
 		</div>
 	</div>
@@ -38,8 +38,8 @@
 				<div class="blockIcon">
 					@include('icons._talking')
 				</div>
-				<h1 class="title">{{ $words[1]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[1]->textarea)) !!}</p>
+				{{-- <h1 class="title">{{ $words[1]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[1]->textarea)) !!}</p> --}}
 
 			</div>
 		</div>
@@ -48,8 +48,8 @@
 				<div class="blockIcon">
 					@include('icons._service')
 				</div>
-				<h1 class="title">{{ $words[2]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[2]->textarea)) !!}</p>
+				{{-- <h1 class="title">{{ $words[2]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[2]->textarea)) !!}</p> --}}
 
 			</div>
 		</div>
@@ -58,8 +58,8 @@
 				<div class="blockIcon">
 					@include('icons._creditcard')
 				</div>
-				<h1 class="title">{{ $words[3]->word }}.</h1>
-				<p>{!! nl2br(e($textareas[3]->textarea)) !!}</p>
+				{{-- <h1 class="title">{{ $words[3]->word }}.</h1>
+				<p>{!! nl2br(e($textareas[3]->textarea)) !!}</p> --}}
 
 			</div>
 
