@@ -15,13 +15,15 @@ class DataController extends Controller
     public function getIndex()
     {
 
-        $page = Page::first();
-        $words = Word::all()->where('page_id', $page->id);
-        $textareas = Textarea::all()->where('page_id', $page->id);
-        $posts = Post::orderBy('id', 'desc')->take(4)->get();
-        $latestPost = Post::all()->last();
+        // $page = Page::first();
+        // $words = Word::all()->where('page_id', $page->id);
+        // $textareas = Textarea::all()->where('page_id', $page->id);
+        // $posts = Post::orderBy('id', 'desc')->take(4)->get();
+        // $latestPost = Post::all()->last();
+        //
+        // return view('index', compact('posts', 'latestPost', 'page', 'words', 'textareas'));
 
-        return view('index', compact('posts', 'latestPost', 'page', 'words', 'textareas'));
+        return view('index');
     }
 
 }
